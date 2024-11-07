@@ -3,14 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currency Dropdown</title>
+    <title>Currency Selector with Autosuggest</title>
+    <style>
+        /* Simple styling for suggestions dropdown */
+        .suggestions {
+            border: 1px solid #ccc;
+            max-height: 150px;
+            overflow-y: auto;
+            position: absolute;
+            background-color: white;
+            width: 200px;
+        }
+        .suggestion-item {
+            padding: 8px;
+            cursor: pointer;
+        }
+        .suggestion-item:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
 </head>
 <body>
     <h1>Select a Currency</h1>
-    <label for="currencySelect">Currency:</label>
-    <select id="currencySelect">
-        <option value="">--Select a Currency--</option>
-    </select>
+    <label for="currencyInput">Currency:</label>
+    <input type="text" id="currencyInput" placeholder="Type to search..." autocomplete="off">
+    <div id="suggestions" class="suggestions"></div>
 
     <script src="script.js"></script>
 </body>
