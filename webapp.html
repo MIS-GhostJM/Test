@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app-style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>A C E S</title>
+</head>
+<body>
+    <div class="app-container">
+        <div class="head-banner">
+            <div class="head-logo">
+                <h3><i class="fa-solid fa-comments"></i> A C E S</h3>
+                <h4>Automated Chat Enhancement Script</h4>
+            </div>
+            <div class="searchbar-group">
+                <select id="channel-selection">
+                    <option value="all">All</option>
+                    <option value="chat">Chat</option>
+                    <option value="voice">Voice</option>
+                </select>
+                <input type="text" id="search-input" placeholder="Search script...">
+                <button id="search-action">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="quick-link">
+                <button class="fd-calculator-link">
+                    <a href="https://mis-ghostjm.github.io/fd-calculator/" target="_blank">
+                        <i class="fa-solid fa-calculator"></i>
+                        <h3>FD Calculator</h3>
+                    </a>
+                </button>
+            </div>
+            <div class="customer-input">
+                <input type="text" id="customer" placeholder="Customer Name">
+                <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div class="agent-user-input">
+                <input type="text" id="user" placeholder="Agent Name">
+                <i class="fa-solid fa-user-secret"></i>
+            </div>
+        </div>
+        <main class="app-body">
+            <div class="side-panel">
+                <div class="nav-item active">
+                    <button id="script-page-action">
+                        <i class="fa-solid fa-scroll"></i>
+                    </button>
+                    <div class="nav-tooltip">Scripts</div>
+                </div>
+                <div class="nav-item">
+                    <button id="errands-page-action">
+                        <i class="fa-solid fa-clipboard"></i>
+                        <i class="fa-solid fa-clipboard"></i>
+                    </button>
+                    <div class="nav-tooltip">Errands</div>
+                </div>
+                <div class="nav-item">
+                    <button id="notes-page-action">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </button>
+                    <div class="nav-tooltip">Freeflow Notes</div>
+                </div>
+            </div>
+            <div class="main-page">
+                <!--Freeflow Notes-->
+                <div class="sub-page" id="notes-page">
+                    <div class="freeflow-header">
+                        Freeflow Notes
+                    </div>
+                    <div class="freeflow-input">
+                        <textarea name="freeflow-textarea" id="ff-txt" placeholder="Your notes here..."></textarea>
+                    </div>
+                </div>
+                <!--Freeflow Notes End-->
+
+                <!--Errands Note-->
+                <div class="sub-page" id="errands-page">
+                    <div class="errands-header">
+                        Errand Notes
+                    </div>
+                </div>
+                <!--Errands Note End-->
+
+                <!--Script Page-->
+                <div class="sub-page active" id="script-page">
+                    <div class="script-nav-container">
+                        <!--Voice Nav-->
+                        <button id="opening-nav" class="nav-btn active">Opening</button>
+                        <button id="closing-nav" class="nav-btn">Closing</button>
+                        <button id="hold-nav" class="nav-btn">Hold</button>
+                        <button id="helpful-statement-nav" class="nav-btn">Helpful Statement</button>
+                    </div>
+
+                    <div class="script-canvas">
+                        <!--Chat Opening-->               
+                            <div class="script-module active" id="opening">
+                                <div class="script-title-chat active">
+                                    <h4>Chat Opening ETG/B.com UK</h4>
+                                    <p>(Asking to wait)</p>
+                                </div>
+                                <div class="script-card-sub">
+                                    <div class="card-module">
+                                        Hello <span class="manual-edit" data-default-text="[Cx Name]" onclick="enableTextEdit(this)">[Cx Name]</span>, my name is <span class="manual-edit" data-default-text="[Agent Name]" onclick="enableTextEdit(this)">[Agent Name]</span>. Please give me a moment to review your request.
+                                    </div>
+                                    <div class="card-module">
+                                        Thank for Calling
+                                    </div>
+                                </div>
+                                <div class="script-title-voice active">
+                                    <h4>Chat Opening (asking to wait) ETG/B.com UK</h4>
+                                </div>
+                                <div class="script-card-sub">
+                                    <div class="card-module">
+                                        <p>Hello <span class="manual-edit" data-default-text="[Cx Name]" onclick="enableTextEdit(this)">[Cx Name]</span>, my name is <span class="manual-edit" data-default-text="[Agent Name]" onclick="enableTextEdit(this)">[Agent Name]</span>. Please give me a moment to review your request.</p>
+                                    </div>
+                                </div>
+                                <div class="script-title-voice active">
+                                    <h4>Transform</h4>
+                                </div>
+                                <div class="script-card-sub">
+                                    <div class="card-module">
+                                        <p>Hello <span class="manual-edit" data-default-text="[Cx Name]" onclick="enableTextEdit(this)">[Cx Name]</span>, my name is <span class="manual-edit" data-default-text="[Agent Name]" onclick="enableTextEdit(this)">[Agent Name]</span>. Please give me a moment to review your request.</p>
+                                    </div>
+                                </div>
+                                <div class="script-title-chat active">
+                                    <h4>Chat Opening ETG/B.com UK</h4>
+                                    <p>(Asking to state the request)</p>
+                                </div>
+                                <div class="script-card-sub">
+                                    <div class="card-module">
+                                        <p>Hello <span class="manual-edit" data-default-text="[Cx Name]" onclick="enableTextEdit(this)">[Cx Name]</span>, my name is <span class="manual-edit" data-default-text="[Agent Name]" onclick="enableTextEdit(this)">[Agent Name]</span>. How may I help you with your booking?.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        <!--Chat Opening---End-->
+                        <!--Closing Start-->
+                            <div class="script-module" id="closing">
+                                <div class="script-title-chat active">
+                                    <h4>Chat Opening ETG/B.com UK</h4>
+                                    <p>(Asking to wait)</p>
+                                </div>
+                                <div class="script-card-sub">
+                                    <div class="card-module">
+                                        <p>Hello <span class="manual-edit" data-default-text="[Cx Name]" onclick="enableTextEdit(this)">[Cx Name]</span>, my name is <span class="manual-edit" data-default-text="[Agent Name]" onclick="enableTextEdit(this)">[Agent Name]</span>. Please give me a moment to review your request.</p>
+                                    </div>
+                                </div>
+                                <div class="script-title-voice active">
+                                    <h4>Chat Opening (asking to wait) ETG/B.com UK</h4>
+                                </div>
+                                <div class="script-card-sub">
+                                    <div class="card-module">
+                                        <p>Hello <span class="manual-edit" data-default-text="[Cx Name]" onclick="enableTextEdit(this)">[Cx Name]</span>, my name is <span class="manual-edit" data-default-text="[Agent Name]" onclick="enableTextEdit(this)">[Agent Name]</span>. Please give me a moment to review your request.</p>
+                                    </div>
+                                </div>
+                                <div class="script-title-chat active">
+                                    <h4>Chat Opening ETG/B.com UK</h4>
+                                    <p>(Asking to state the request)</p>
+                                </div>
+                                <div class="script-card-sub">
+                                    <div class="card-module">
+                                        <p>Hello <span class="manual-edit" data-default-text="[Cx Name]" onclick="enableTextEdit(this)">[Cx Name]</span>, my name is <span class="manual-edit" data-default-text="[Agent Name]" onclick="enableTextEdit(this)">[Agent Name]</span>. How may I help you with your booking?.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        <!--Closing END-->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js" defer></script>
+    <script src="copy-functions.js" defer></script>
+    <script src="sync-inputs.js" defer></script>
+</body>
+</html>
